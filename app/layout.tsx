@@ -6,6 +6,8 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import DesignerContextProvider from "@/components/context/DesignerContext";
 import NextTopLoader from "nextjs-toploader"
 import { Analytics } from '@vercel/analytics/react';
+import GeoTracker from "@/components/geo";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +34,7 @@ export default function RootLayout({
               disableTransitionOnChange
             >
               {children}{" "}
+              <GeoTracker />
               <Analytics />
             </ThemeProvider>
           </DesignerContextProvider>
