@@ -1,9 +1,9 @@
 import { authMiddleware } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-export default authMiddleware({});
+//export default authMiddleware({});
  
-/*export default authMiddleware({
+export default authMiddleware({
   // Called after Clerk checks auth
   afterAuth(auth, req: NextRequest) {
     const ip =
@@ -19,7 +19,7 @@ export default authMiddleware({});
     return NextResponse.next();
   },
 });
-*/
+
 
 export const config = {
       matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
